@@ -149,6 +149,9 @@ class DisplayWrongQuestions extends StatelessWidget {
             child: Column(
               children: [
                 Text(
+                    itemIndex.toString(),
+                    // code for question display
+
                     questionList[int.parse(_listkeys[itemIndex]) - 1].question),
                 SizedBox(
                   height: 8,
@@ -168,15 +171,17 @@ class DisplayWrongQuestions extends StatelessWidget {
                         color: Colors.red,
                       ),
                       child: Text(
-                        questionList[int.parse(_listkeys[itemIndex]) - 1]
-                                .options[
-                            _listvalues[int.parse(_listkeys[itemIndex]) - 1] -
-                                1],
-                        style: TextStyle(),
-                        // "Your Ans: ${questionList[markedWrongAnser[_list[itemIndex]]].correctAns.toString()}",
-                        // style(
-                        //     fontSize: deviceHeight * 0.025,
-                        //     color: Colors.black),
+                        itemIndex.toString(),
+
+                        // code for wrong answer marked
+
+                        // questionList[int.parse(_listkeys[itemIndex]) - 1]
+                        //         .options[
+                        //     _listvalues[int.parse(_listkeys[itemIndex]) - 1] -
+                        //         1],
+                        style: TextStyle(
+                            fontSize: deviceHeight * 0.019,
+                            color: Colors.black),
                       ),
                     ),
                     Container(
@@ -191,9 +196,10 @@ class DisplayWrongQuestions extends StatelessWidget {
                         color: Colors.green,
                       ),
                       child: Text(
+                        // correct code for correct answer
                         questionList[int.parse(_listkeys[itemIndex]) - 1]
                             .options[correctAnswers - 1],
-                        // correctAnswers.toString(),
+
                         style: TextStyle(
                             fontSize: deviceHeight * 0.025,
                             color: Colors.black),
