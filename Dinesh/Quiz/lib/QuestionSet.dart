@@ -48,23 +48,12 @@ class QuestionSet extends StatelessWidget {
               text: itemNum.options[index],
               rightanserimport: itemNum.correctAns,
               press: () {
-                if ((index + 1 == itemNum.correctAns)) {
-                  // UserAnsweredData.appendValues((index + 1).toString());
-                  // for (var i = 0; i < markedCorrect.length; i++) {
-                  // if (markedCorrect.isEmpty) {
-                  // markedCorrect.add(itemNum.id);
-                  qId = itemNum.id;
-                  // print(markedCorrect);
-                  markedCorrect.add(qId);
-                  print("Correct $markedCorrect");
-                  // }
-                  // if (solvedId.contains(itemNum.id)) {
-                  // markedCorrect.add(itemNum.id);
-                  // solvedId.remove(itemNum.id);
-                  // }
-                  // print(markedCorrect);
+                // code when a box is clicked 
 
-                  // print(markedCorrect);
+                if ((index + 1 == itemNum.correctAns)) {
+                  qId = itemNum.id;
+                  markedCorrect.add(qId);
+                 
                 } else {
                   qId = itemNum.id;
                   markedWrong.add(qId);

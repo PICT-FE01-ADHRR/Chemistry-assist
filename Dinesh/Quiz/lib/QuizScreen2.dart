@@ -102,7 +102,7 @@ class _QuizScreen2State extends State<QuizScreen2> {
                               return CustomDialogBox(
                                   title: " Quiz Completed",
                                   description: "Press Submit Button ",
-                                  buttonText: "Cancel");
+                                  buttonText: "Submit");
                               // return AlertDialog(
                               //   title: Text("Quiz Completed"),
                               //   content: Text("Click Submit Button"),
@@ -223,7 +223,10 @@ class CustomDialogBox extends StatelessWidget {
                 alignment: Alignment.bottomRight,
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ScoreScreen()));;
                   },
                   child: Container(
                     alignment: Alignment.center,

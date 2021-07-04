@@ -149,10 +149,12 @@ class DisplayWrongQuestions extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                    itemIndex.toString(),
+                    // itemIndex.toString(),
                     // code for question display
 
-                    questionList[int.parse(_listkeys[itemIndex]) - 1].question),
+                    questionList[int.parse(_listkeys[itemIndex]) - 1].question,
+                    
+                    ),
                 SizedBox(
                   height: 8,
                 ),
@@ -171,14 +173,15 @@ class DisplayWrongQuestions extends StatelessWidget {
                         color: Colors.red,
                       ),
                       child: Text(
-                        itemIndex.toString(),
+                        // itemIndex.toString(),
 
                         // code for wrong answer marked
 
-                        // questionList[int.parse(_listkeys[itemIndex]) - 1]
-                        //         .options[
-                        //     _listvalues[int.parse(_listkeys[itemIndex]) - 1] -
-                        //         1],
+                        questionList[int.parse(_listkeys[itemIndex]) - 1]
+                                .options[
+                            _listvalues[itemIndex]-1],
+
+
                         style: TextStyle(
                             fontSize: deviceHeight * 0.019,
                             color: Colors.black),
